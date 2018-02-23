@@ -128,10 +128,10 @@ namespace TyteraFlashTool
         // firmware
         private void DownloadGPSButton_Click(object sender, EventArgs e)
         {
-            StatusLabel.Text = "downloading gps_fw.bin ...";
+            StatusLabel.Text = cbVersao.SelectedItem + ". Downloading gps_fw.bin ...";
             downloading = true;
 
-            switch (cbVersao.SelectedText)
+            switch (cbVersao.SelectedItem)
             {
                 case "Ecrã Novo":
                     webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AABD2GHgJkq-D2iNliIY9s-La/firmware-GPS.bin?dl=1"), "gps_fw.bin");
@@ -160,12 +160,12 @@ namespace TyteraFlashTool
 
         private void DownloadNONGPSButton_Click(object sender, EventArgs e)
         {
-            StatusLabel.Text = "downloading nongps_fw.bin ...";
+            StatusLabel.Text = cbVersao.SelectedItem + ". Downloading nongps_fw.bin ...";
             DLFileName = "fw.bin";
             downloading = true;
 
 
-            switch (cbVersao.SelectedText) {
+            switch (cbVersao.SelectedItem) {
                 case "Ecrã Novo":
                     webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AACGA-MHWHgstYODs3muypxMa/firmware-noGPS.bin?dl=1"), "nongps_fw.bin");
                     break;
