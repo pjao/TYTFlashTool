@@ -53,6 +53,7 @@
             this.FilenameLabel = new NSLabel();
             this.FilenameTextBox = new NSTextBox();
             this.ExitButton = new NSButton();
+            this.nsLabel1 = new NSLabel();
             this.nsTheme.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GroupBox.SuspendLayout();
@@ -127,6 +128,7 @@
             // 
             // GroupBox
             // 
+            this.GroupBox.Controls.Add(this.nsLabel1);
             this.GroupBox.Controls.Add(this.FlashFirmwareFileButton);
             this.GroupBox.Controls.Add(this.FlashFirmwareButton);
             this.GroupBox.Controls.Add(this.DownloadNONGPSButton);
@@ -291,6 +293,20 @@
             this.ExitButton.Text = "X";
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
+            // nsLabel1
+            // 
+            this.nsLabel1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.nsLabel1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nsLabel1.ForeColor = System.Drawing.Color.Transparent;
+            this.nsLabel1.Location = new System.Drawing.Point(142, 129);
+            this.nsLabel1.Name = "nsLabel1";
+            this.nsLabel1.Size = new System.Drawing.Size(85, 23);
+            this.nsLabel1.TabIndex = 13;
+            this.nsLabel1.Text = "nsLabel1";
+            this.nsLabel1.Value1 = "20180223-1230";
+            this.nsLabel1.Value2 = "";
+            this.nsLabel1.Click += new System.EventHandler(this.nsLabel1_Click);
+            // 
             // TyteraFlashToolForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,6 +352,7 @@
         private System.Windows.Forms.Timer Timer;
         private NSProgressBar nsProgressBar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private NSLabel nsLabel1;
     }
 }
 

@@ -129,7 +129,7 @@ namespace TyteraFlashTool
             StatusLabel.Text = "downloading gps_fw.bin ...";
 
             downloading = true;
-            webc.DownloadFileAsync(new Uri("https://github.com/pjao/md380tools-PT/raw/master/firmware-GPS.bin"), "gps_fw.bin");
+            webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AABD2GHgJkq-D2iNliIY9s-La/firmware-GPS.bin?dl=1"), "gps_fw.bin");
 
             if(File.Exists("nongps_fw.bin"))
             {
@@ -142,7 +142,7 @@ namespace TyteraFlashTool
             StatusLabel.Text = "downloading nongps_fw.bin ...";
             DLFileName = "fw.bin";
             downloading = true;
-            webc.DownloadFileAsync(new Uri("https://github.com/pjao/md380tools-PT/raw/master/firmware-noGPS.bin"), "nongps_fw.bin");
+            webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AACGA-MHWHgstYODs3muypxMa/firmware-noGPS.bin?dl=1"), "nongps_fw.bin");
 
             if (File.Exists("gps_fw.bin"))
             {
@@ -269,7 +269,7 @@ namespace TyteraFlashTool
             bw.RunWorkerAsync();*/
             DLFileName = "userdb.bin";
             downloading = true;
-            webc.DownloadFileAsync(new Uri("https://github.com/pjao/md380tools-PT/raw/master/userdb.bin"), "userdb.bin");
+            webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AAB9TpX1gAft3_m17I3eY144a/userdb.bin?dl=1"), "userdb.bin");
 
 
 
@@ -361,6 +361,11 @@ namespace TyteraFlashTool
         }
 
         private void FilenameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nsLabel1_Click(object sender, EventArgs e)
         {
 
         }
