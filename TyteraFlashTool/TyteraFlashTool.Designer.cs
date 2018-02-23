@@ -38,8 +38,6 @@
             this.StatusLabel = new System.Windows.Forms.Label();
             this.nsProgressBar = new NSProgressBar();
             this.GroupBox = new NSGroupBox();
-            this.WriteButton = new NSButton();
-            this.ReadButton = new NSButton();
             this.FlashFirmwareFileButton = new NSButton();
             this.FlashFirmwareButton = new NSButton();
             this.DownloadNONGPSButton = new NSButton();
@@ -50,7 +48,6 @@
             this.nsSeperator3 = new NSSeperator();
             this.nsLabel3 = new NSLabel();
             this.nsLabel2 = new NSLabel();
-            this.nsLabel1 = new NSLabel();
             this.nsSeperator1 = new NSSeperator();
             this.OpenButton = new NSButton();
             this.FilenameLabel = new NSLabel();
@@ -93,7 +90,7 @@
             this.nsTheme.SmartBounds = true;
             this.nsTheme.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultLocation;
             this.nsTheme.TabIndex = 0;
-            this.nsTheme.Text = "Tytera Flash Tool  v1.04                                     by KG5RKI";
+            this.nsTheme.Text = "MD380/390 FlashTool v1.04 changed by CT2JAY for PT";
             this.nsTheme.TransparencyKey = System.Drawing.Color.Empty;
             this.nsTheme.Transparent = false;
             this.nsTheme.Click += new System.EventHandler(this.nsTheme_Click);
@@ -130,8 +127,6 @@
             // 
             // GroupBox
             // 
-            this.GroupBox.Controls.Add(this.WriteButton);
-            this.GroupBox.Controls.Add(this.ReadButton);
             this.GroupBox.Controls.Add(this.FlashFirmwareFileButton);
             this.GroupBox.Controls.Add(this.FlashFirmwareButton);
             this.GroupBox.Controls.Add(this.DownloadNONGPSButton);
@@ -142,7 +137,6 @@
             this.GroupBox.Controls.Add(this.nsSeperator3);
             this.GroupBox.Controls.Add(this.nsLabel3);
             this.GroupBox.Controls.Add(this.nsLabel2);
-            this.GroupBox.Controls.Add(this.nsLabel1);
             this.GroupBox.Controls.Add(this.nsSeperator1);
             this.GroupBox.DrawSeperator = false;
             this.GroupBox.Location = new System.Drawing.Point(12, 66);
@@ -153,36 +147,18 @@
             this.GroupBox.Text = "GroupBox";
             this.GroupBox.Title = "";
             // 
-            // WriteButton
-            // 
-            this.WriteButton.Location = new System.Drawing.Point(94, 7);
-            this.WriteButton.Name = "WriteButton";
-            this.WriteButton.Size = new System.Drawing.Size(42, 23);
-            this.WriteButton.TabIndex = 14;
-            this.WriteButton.Text = "Write";
-            this.WriteButton.Click += new System.EventHandler(this.WriteButton_Click);
-            // 
-            // ReadButton
-            // 
-            this.ReadButton.Location = new System.Drawing.Point(142, 7);
-            this.ReadButton.Name = "ReadButton";
-            this.ReadButton.Size = new System.Drawing.Size(42, 23);
-            this.ReadButton.TabIndex = 13;
-            this.ReadButton.Text = "Read";
-            this.ReadButton.Click += new System.EventHandler(this.ReadButton_Click);
-            // 
             // FlashFirmwareFileButton
             // 
-            this.FlashFirmwareFileButton.Location = new System.Drawing.Point(142, 77);
+            this.FlashFirmwareFileButton.Location = new System.Drawing.Point(142, 48);
             this.FlashFirmwareFileButton.Name = "FlashFirmwareFileButton";
-            this.FlashFirmwareFileButton.Size = new System.Drawing.Size(94, 23);
+            this.FlashFirmwareFileButton.Size = new System.Drawing.Size(111, 23);
             this.FlashFirmwareFileButton.TabIndex = 12;
-            this.FlashFirmwareFileButton.Text = "Flash from file";
+            this.FlashFirmwareFileButton.Text = "Flash do ficheiro";
             this.FlashFirmwareFileButton.Click += new System.EventHandler(this.FlashFirmwareFileButton_Click);
             // 
             // FlashFirmwareButton
             // 
-            this.FlashFirmwareButton.Location = new System.Drawing.Point(94, 77);
+            this.FlashFirmwareButton.Location = new System.Drawing.Point(94, 48);
             this.FlashFirmwareButton.Name = "FlashFirmwareButton";
             this.FlashFirmwareButton.Size = new System.Drawing.Size(42, 23);
             this.FlashFirmwareButton.TabIndex = 11;
@@ -191,16 +167,16 @@
             // 
             // DownloadNONGPSButton
             // 
-            this.DownloadNONGPSButton.Location = new System.Drawing.Point(203, 48);
+            this.DownloadNONGPSButton.Location = new System.Drawing.Point(203, 19);
             this.DownloadNONGPSButton.Name = "DownloadNONGPSButton";
             this.DownloadNONGPSButton.Size = new System.Drawing.Size(132, 23);
             this.DownloadNONGPSButton.TabIndex = 10;
-            this.DownloadNONGPSButton.Text = "Download NON-GPS";
+            this.DownloadNONGPSButton.Text = "Download SEM-GPS";
             this.DownloadNONGPSButton.Click += new System.EventHandler(this.DownloadNONGPSButton_Click);
             // 
             // DownloadGPSButton
             // 
-            this.DownloadGPSButton.Location = new System.Drawing.Point(94, 48);
+            this.DownloadGPSButton.Location = new System.Drawing.Point(94, 19);
             this.DownloadGPSButton.Name = "DownloadGPSButton";
             this.DownloadGPSButton.Size = new System.Drawing.Size(103, 23);
             this.DownloadGPSButton.TabIndex = 9;
@@ -209,16 +185,16 @@
             // 
             // FlashfromFileUserDBButton
             // 
-            this.FlashfromFileUserDBButton.Location = new System.Drawing.Point(238, 122);
+            this.FlashfromFileUserDBButton.Location = new System.Drawing.Point(237, 103);
             this.FlashfromFileUserDBButton.Name = "FlashfromFileUserDBButton";
-            this.FlashfromFileUserDBButton.Size = new System.Drawing.Size(94, 23);
+            this.FlashfromFileUserDBButton.Size = new System.Drawing.Size(107, 23);
             this.FlashfromFileUserDBButton.TabIndex = 8;
-            this.FlashfromFileUserDBButton.Text = "Flash from file";
+            this.FlashfromFileUserDBButton.Text = "Flash do ficheiro";
             this.FlashfromFileUserDBButton.Click += new System.EventHandler(this.FlashfromFileUserDBButton_Click);
             // 
             // FlashUserDBButton
             // 
-            this.FlashUserDBButton.Location = new System.Drawing.Point(190, 122);
+            this.FlashUserDBButton.Location = new System.Drawing.Point(189, 103);
             this.FlashUserDBButton.Name = "FlashUserDBButton";
             this.FlashUserDBButton.Size = new System.Drawing.Size(42, 23);
             this.FlashUserDBButton.TabIndex = 7;
@@ -227,7 +203,7 @@
             // 
             // DownloadUserDBButton
             // 
-            this.DownloadUserDBButton.Location = new System.Drawing.Point(71, 122);
+            this.DownloadUserDBButton.Location = new System.Drawing.Point(70, 103);
             this.DownloadUserDBButton.Name = "DownloadUserDBButton";
             this.DownloadUserDBButton.Size = new System.Drawing.Size(113, 23);
             this.DownloadUserDBButton.TabIndex = 6;
@@ -236,7 +212,7 @@
             // 
             // nsSeperator3
             // 
-            this.nsSeperator3.Location = new System.Drawing.Point(3, 106);
+            this.nsSeperator3.Location = new System.Drawing.Point(2, 87);
             this.nsSeperator3.Name = "nsSeperator3";
             this.nsSeperator3.Size = new System.Drawing.Size(354, 10);
             this.nsSeperator3.TabIndex = 5;
@@ -245,7 +221,7 @@
             // nsLabel3
             // 
             this.nsLabel3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.nsLabel3.Location = new System.Drawing.Point(3, 122);
+            this.nsLabel3.Location = new System.Drawing.Point(2, 103);
             this.nsLabel3.Name = "nsLabel3";
             this.nsLabel3.Size = new System.Drawing.Size(72, 23);
             this.nsLabel3.TabIndex = 4;
@@ -256,7 +232,7 @@
             // nsLabel2
             // 
             this.nsLabel2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.nsLabel2.Location = new System.Drawing.Point(3, 48);
+            this.nsLabel2.Location = new System.Drawing.Point(3, 19);
             this.nsLabel2.Name = "nsLabel2";
             this.nsLabel2.Size = new System.Drawing.Size(85, 23);
             this.nsLabel2.TabIndex = 3;
@@ -264,20 +240,9 @@
             this.nsLabel2.Value1 = "FIRMWARE";
             this.nsLabel2.Value2 = "";
             // 
-            // nsLabel1
-            // 
-            this.nsLabel1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.nsLabel1.Location = new System.Drawing.Point(3, 3);
-            this.nsLabel1.Name = "nsLabel1";
-            this.nsLabel1.Size = new System.Drawing.Size(85, 23);
-            this.nsLabel1.TabIndex = 2;
-            this.nsLabel1.Text = "nsLabel1";
-            this.nsLabel1.Value1 = "CODEPLUG";
-            this.nsLabel1.Value2 = "";
-            // 
             // nsSeperator1
             // 
-            this.nsSeperator1.Location = new System.Drawing.Point(0, 32);
+            this.nsSeperator1.Location = new System.Drawing.Point(0, 3);
             this.nsSeperator1.Name = "nsSeperator1";
             this.nsSeperator1.Size = new System.Drawing.Size(354, 10);
             this.nsSeperator1.TabIndex = 0;
@@ -289,7 +254,7 @@
             this.OpenButton.Name = "OpenButton";
             this.OpenButton.Size = new System.Drawing.Size(44, 23);
             this.OpenButton.TabIndex = 4;
-            this.OpenButton.Text = "Open";
+            this.OpenButton.Text = "Abrir";
             this.OpenButton.Click += new System.EventHandler(this.OpenButton_Click);
             // 
             // FilenameLabel
@@ -299,8 +264,9 @@
             this.FilenameLabel.Name = "FilenameLabel";
             this.FilenameLabel.Size = new System.Drawing.Size(75, 23);
             this.FilenameLabel.TabIndex = 3;
-            this.FilenameLabel.Value1 = "FILENAME";
+            this.FilenameLabel.Value1 = "FICHEIRO";
             this.FilenameLabel.Value2 = "";
+            this.FilenameLabel.Click += new System.EventHandler(this.FilenameLabel_Click);
             // 
             // FilenameTextBox
             // 
@@ -354,7 +320,6 @@
         private NSButton OpenButton;
         private NSGroupBox GroupBox;
         private NSSeperator nsSeperator1;
-        private NSLabel nsLabel1;
         private NSLabel nsLabel2;
         private NSLabel nsLabel3;
         private NSSeperator nsSeperator3;
@@ -366,8 +331,6 @@
         private NSButton DownloadNONGPSButton;
         private NSButton FlashFirmwareFileButton;
         private NSButton FlashFirmwareButton;
-        private NSButton ReadButton;
-        private NSButton WriteButton;
         private System.Windows.Forms.OpenFileDialog OpenFileDialog;
         private System.Windows.Forms.SaveFileDialog SaveFileDialog;
         private System.Windows.Forms.Timer Timer;
