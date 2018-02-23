@@ -30,6 +30,8 @@ namespace TyteraFlashTool
             webc.DownloadProgressChanged += new DownloadProgressChangedEventHandler(DownloadProgressCallback);
 
             //tr.TickleTickle();
+            cbVersao.SelectedIndex = 0;
+            
             Timer.Start();
         }
 
@@ -127,14 +129,33 @@ namespace TyteraFlashTool
         private void DownloadGPSButton_Click(object sender, EventArgs e)
         {
             StatusLabel.Text = "downloading gps_fw.bin ...";
-
             downloading = true;
-            webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AABD2GHgJkq-D2iNliIY9s-La/firmware-GPS.bin?dl=1"), "gps_fw.bin");
+
+            switch (cbVersao.SelectedText)
+            {
+                case "Ecrã Novo":
+                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AABD2GHgJkq-D2iNliIY9s-La/firmware-GPS.bin?dl=1"), "gps_fw.bin");
+                    break;
+                case "Ecrã Antigo":
+                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AADqbd7Figg9xG0-YY7mfg9Xa/firmware-GPS-Legacy.bin?dl=1"), "gps_fw.bin");
+                    break;
+                case "Firmware Original":
+                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AABQ8MWFRxzXcxoenH3dRlC7a/S013.020.bin?dl=1"), "gps_fw.bin");
+                    break;
+                default:
+                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AABD2GHgJkq-D2iNliIY9s-La/firmware-GPS.bin?dl=1"), "gps_fw.bin");
+                    break;
+
+            }
+
+
+//            webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AABD2GHgJkq-D2iNliIY9s-La/firmware-GPS.bin?dl=1"), "gps_fw.bin");
 
             if(File.Exists("nongps_fw.bin"))
             {
                 File.Delete("nongps_fw.bin");
             }
+
         }
 
         private void DownloadNONGPSButton_Click(object sender, EventArgs e)
@@ -142,7 +163,25 @@ namespace TyteraFlashTool
             StatusLabel.Text = "downloading nongps_fw.bin ...";
             DLFileName = "fw.bin";
             downloading = true;
-            webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AACGA-MHWHgstYODs3muypxMa/firmware-noGPS.bin?dl=1"), "nongps_fw.bin");
+
+
+            switch (cbVersao.SelectedText) {
+                case "Ecrã Novo":
+                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AACGA-MHWHgstYODs3muypxMa/firmware-noGPS.bin?dl=1"), "nongps_fw.bin");
+                    break;
+                case "Ecrã Antigo":
+                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AADpYDz5qMblSvwYbXb0GEIUa/firmware-noGPS%20-%20Legacy.bin?dl=1"), "nongps_fw.bin");
+                    break;
+                case "Firmware Original":
+                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AABqr94xAXF4pHIUwLR3u7aQa/D013.020.bin?dl=1"), "nongps_fw.bin");
+                    break;
+                default:
+                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AACGA-MHWHgstYODs3muypxMa/firmware-noGPS.bin?dl=1"), "nongps_fw.bin");
+                    break;
+
+            }
+
+//            webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AACGA-MHWHgstYODs3muypxMa/firmware-noGPS.bin?dl=1"), "nongps_fw.bin");
 
             if (File.Exists("gps_fw.bin"))
             {
@@ -366,6 +405,16 @@ namespace TyteraFlashTool
         }
 
         private void nsLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

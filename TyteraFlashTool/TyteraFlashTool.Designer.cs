@@ -38,6 +38,7 @@
             this.StatusLabel = new System.Windows.Forms.Label();
             this.nsProgressBar = new NSProgressBar();
             this.GroupBox = new NSGroupBox();
+            this.nsLabel1 = new NSLabel();
             this.FlashFirmwareFileButton = new NSButton();
             this.FlashFirmwareButton = new NSButton();
             this.DownloadNONGPSButton = new NSButton();
@@ -53,7 +54,7 @@
             this.FilenameLabel = new NSLabel();
             this.FilenameTextBox = new NSTextBox();
             this.ExitButton = new NSButton();
-            this.nsLabel1 = new NSLabel();
+            this.cbVersao = new System.Windows.Forms.ComboBox();
             this.nsTheme.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.GroupBox.SuspendLayout();
@@ -128,6 +129,7 @@
             // 
             // GroupBox
             // 
+            this.GroupBox.Controls.Add(this.cbVersao);
             this.GroupBox.Controls.Add(this.nsLabel1);
             this.GroupBox.Controls.Add(this.FlashFirmwareFileButton);
             this.GroupBox.Controls.Add(this.FlashFirmwareButton);
@@ -149,18 +151,32 @@
             this.GroupBox.Text = "GroupBox";
             this.GroupBox.Title = "";
             // 
+            // nsLabel1
+            // 
+            this.nsLabel1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.nsLabel1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nsLabel1.ForeColor = System.Drawing.Color.Transparent;
+            this.nsLabel1.Location = new System.Drawing.Point(142, 129);
+            this.nsLabel1.Name = "nsLabel1";
+            this.nsLabel1.Size = new System.Drawing.Size(85, 23);
+            this.nsLabel1.TabIndex = 13;
+            this.nsLabel1.Text = "nsLabel1";
+            this.nsLabel1.Value1 = "20180223-1630";
+            this.nsLabel1.Value2 = "";
+            this.nsLabel1.Click += new System.EventHandler(this.nsLabel1_Click);
+            // 
             // FlashFirmwareFileButton
             // 
-            this.FlashFirmwareFileButton.Location = new System.Drawing.Point(142, 48);
+            this.FlashFirmwareFileButton.Location = new System.Drawing.Point(236, 48);
             this.FlashFirmwareFileButton.Name = "FlashFirmwareFileButton";
-            this.FlashFirmwareFileButton.Size = new System.Drawing.Size(111, 23);
+            this.FlashFirmwareFileButton.Size = new System.Drawing.Size(107, 23);
             this.FlashFirmwareFileButton.TabIndex = 12;
             this.FlashFirmwareFileButton.Text = "Flash do ficheiro";
             this.FlashFirmwareFileButton.Click += new System.EventHandler(this.FlashFirmwareFileButton_Click);
             // 
             // FlashFirmwareButton
             // 
-            this.FlashFirmwareButton.Location = new System.Drawing.Point(94, 48);
+            this.FlashFirmwareButton.Location = new System.Drawing.Point(187, 48);
             this.FlashFirmwareButton.Name = "FlashFirmwareButton";
             this.FlashFirmwareButton.Size = new System.Drawing.Size(42, 23);
             this.FlashFirmwareButton.TabIndex = 11;
@@ -293,19 +309,22 @@
             this.ExitButton.Text = "X";
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // nsLabel1
+            // cbVersao
             // 
-            this.nsLabel1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.nsLabel1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nsLabel1.ForeColor = System.Drawing.Color.Transparent;
-            this.nsLabel1.Location = new System.Drawing.Point(142, 129);
-            this.nsLabel1.Name = "nsLabel1";
-            this.nsLabel1.Size = new System.Drawing.Size(85, 23);
-            this.nsLabel1.TabIndex = 13;
-            this.nsLabel1.Text = "nsLabel1";
-            this.nsLabel1.Value1 = "20180223-1230";
-            this.nsLabel1.Value2 = "";
-            this.nsLabel1.Click += new System.EventHandler(this.nsLabel1_Click);
+            this.cbVersao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.cbVersao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbVersao.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbVersao.Font = new System.Drawing.Font("Verdana", 8F);
+            this.cbVersao.ForeColor = System.Drawing.Color.White;
+            this.cbVersao.FormattingEnabled = true;
+            this.cbVersao.Items.AddRange(new object[] {
+            "Ecrã Novo",
+            "Ecrã Antigo",
+            "Firmware Original"});
+            this.cbVersao.Location = new System.Drawing.Point(3, 48);
+            this.cbVersao.Name = "cbVersao";
+            this.cbVersao.Size = new System.Drawing.Size(155, 21);
+            this.cbVersao.TabIndex = 14;
             // 
             // TyteraFlashToolForm
             // 
@@ -353,6 +372,7 @@
         private NSProgressBar nsProgressBar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private NSLabel nsLabel1;
+        private System.Windows.Forms.ComboBox cbVersao;
     }
 }
 
