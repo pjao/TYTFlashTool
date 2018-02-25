@@ -133,8 +133,11 @@ namespace TyteraFlashTool
 
             switch (cbVersao.SelectedItem)
             {
-                case "Ecrã Novo":
+                case "Ecrã Novo - Letra Preta":
                     webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AABD2GHgJkq-D2iNliIY9s-La/firmware-GPS.bin?dl=1"), "gps_fw.bin");
+                    break;
+                case "Ecrã Novo - Letra Branca":
+                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AADEGwt_qjgiPc3B6YyjryKFa/firmware-GPS-White.bin?dl=1"), "gps_fw.bin");
                     break;
                 case "Ecrã Antigo":
                     webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AADqbd7Figg9xG0-YY7mfg9Xa/firmware-GPS-Legacy.bin?dl=1"), "gps_fw.bin");
@@ -169,8 +172,11 @@ namespace TyteraFlashTool
 
 
             switch (cbVersao.SelectedItem) {
-                case "Ecrã Novo":
+                case "Ecrã Novo - Letra Preta":
                     webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AACGA-MHWHgstYODs3muypxMa/firmware-noGPS.bin?dl=1"), "nongps_fw.bin");
+                    break;
+                case "Ecrã Novo - Letra Branca":
+                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AABwZqjWMay-rKeHR_Qpo6SAa/firmware-noGPS-White.bin?dl=1"), "nongps_fw.bin");
                     break;
                 case "Ecrã Antigo":
                     webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AAD6gj3kxXfMuEMkPIcmO_IBa/firmware-noGPS-Legacy.bin?dl=1"), "nongps_fw.bin");
