@@ -30,7 +30,7 @@ namespace TyteraFlashTool
             webc.DownloadProgressChanged += new DownloadProgressChangedEventHandler(DownloadProgressCallback);
 
             //tr.TickleTickle();
-            cbVersao.SelectedIndex = 0;
+            cbVersao.SelectedIndex = 1;
             
             Timer.Start();
         }
