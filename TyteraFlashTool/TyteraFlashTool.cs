@@ -133,23 +133,31 @@ namespace TyteraFlashTool
 
             switch (cbVersao.SelectedItem)
             {
+                case "BETA - Ultima versão":
+                    webc.DownloadFileAsync(new Uri("https://raw.githubusercontent.com/pjao/MD380tools-PT/master/firmware-GPS-Beta.bin"), "gps_fw.bin");
+                    break;
                 case "Ecrã Novo - Letra Preta":
-                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AABD2GHgJkq-D2iNliIY9s-La/firmware-GPS.bin?dl=1"), "gps_fw.bin");
+//                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AABD2GHgJkq-D2iNliIY9s-La/firmware-GPS.bin?dl=1"), "gps_fw.bin");
+                    webc.DownloadFileAsync(new Uri("https://raw.githubusercontent.com/pjao/MD380tools-PT/master/firmware-GPS.bin"), "gps_fw.bin");
                     break;
                 case "Ecrã Novo - Letra Branca":
-                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AADEGwt_qjgiPc3B6YyjryKFa/firmware-GPS-White.bin?dl=1"), "gps_fw.bin");
+//                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AADEGwt_qjgiPc3B6YyjryKFa/firmware-GPS-White.bin?dl=1"), "gps_fw.bin");
+                    webc.DownloadFileAsync(new Uri("https://raw.githubusercontent.com/pjao/MD380tools-PT/master/firmware-GPS-White.bin"), "gps_fw.bin");
                     break;
                 case "Ecrã Antigo":
-                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AADqbd7Figg9xG0-YY7mfg9Xa/firmware-GPS-Legacy.bin?dl=1"), "gps_fw.bin");
+//                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AADqbd7Figg9xG0-YY7mfg9Xa/firmware-GPS-Legacy.bin?dl=1"), "gps_fw.bin");
+                    webc.DownloadFileAsync(new Uri("https://raw.githubusercontent.com/pjao/MD380tools-PT/master/firmware-GPS-Legacy.bin"), "gps_fw.bin");
                     break;
                 case "MD380Tools Travis":
                     webc.DownloadFileAsync(new Uri("https://pd0zry.nl/md380-fw/00_latest_firmware-S13.020.bin"), "gps_fw.bin");
                     break;
                 case "Firmware Original":
-                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AABQ8MWFRxzXcxoenH3dRlC7a/S013.020.bin?dl=1"), "gps_fw.bin");
+//                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AABQ8MWFRxzXcxoenH3dRlC7a/S013.020.bin?dl=1"), "gps_fw.bin");
+                    webc.DownloadFileAsync(new Uri("https://raw.githubusercontent.com/pjao/MD380tools-PT/master/S013.020.bin"), "gps_fw.bin");
                     break;
                 default:
-                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AABD2GHgJkq-D2iNliIY9s-La/firmware-GPS.bin?dl=1"), "gps_fw.bin");
+//                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AABD2GHgJkq-D2iNliIY9s-La/firmware-GPS.bin?dl=1"), "gps_fw.bin");
+                    webc.DownloadFileAsync(new Uri("https://raw.githubusercontent.com/pjao/MD380tools-PT/master/firmware-GPS-Beta.bin"), "gps_fw.bin");
                     break;
 
             }
@@ -172,23 +180,31 @@ namespace TyteraFlashTool
 
 
             switch (cbVersao.SelectedItem) {
+                case "BETA - Ultima versão":
+                    webc.DownloadFileAsync(new Uri("https://raw.githubusercontent.com/pjao/MD380tools-PT/master/firmware-noGPS-Beta.bin"), "nongps_fw.bin");
+                    break;
                 case "Ecrã Novo - Letra Preta":
-                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AACGA-MHWHgstYODs3muypxMa/firmware-noGPS.bin?dl=1"), "nongps_fw.bin");
+//                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AACGA-MHWHgstYODs3muypxMa/firmware-noGPS.bin?dl=1"), "nongps_fw.bin");
+                    webc.DownloadFileAsync(new Uri("https://raw.githubusercontent.com/pjao/MD380tools-PT/master/firmware-noGPS.bin"), "nongps_fw.bin");
                     break;
                 case "Ecrã Novo - Letra Branca":
-                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AABwZqjWMay-rKeHR_Qpo6SAa/firmware-noGPS-White.bin?dl=1"), "nongps_fw.bin");
+//                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AABwZqjWMay-rKeHR_Qpo6SAa/firmware-noGPS-White.bin?dl=1"), "nongps_fw.bin");
+                    webc.DownloadFileAsync(new Uri("https://raw.githubusercontent.com/pjao/MD380tools-PT/master/firmware-noGPS-White.bin"), "nongps_fw.bin");
                     break;
                 case "Ecrã Antigo":
-                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AAD6gj3kxXfMuEMkPIcmO_IBa/firmware-noGPS-Legacy.bin?dl=1"), "nongps_fw.bin");
+//                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AAD6gj3kxXfMuEMkPIcmO_IBa/firmware-noGPS-Legacy.bin?dl=1"), "nongps_fw.bin");
+                    webc.DownloadFileAsync(new Uri("https://raw.githubusercontent.com/pjao/MD380tools-PT/master/firmware-noGPS-Legacy.bin"), "nongps_fw.bin");
                     break;
                 case "MD380Tools Travis":
                     webc.DownloadFileAsync(new Uri("https://pd0zry.nl/md380-fw/00_latest_firmware.bin"), "nongps_fw.bin");
                     break;
                 case "Firmware Original":
-                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AABqr94xAXF4pHIUwLR3u7aQa/D013.020.bin?dl=1"), "nongps_fw.bin");
+//                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AABqr94xAXF4pHIUwLR3u7aQa/D013.020.bin?dl=1"), "nongps_fw.bin");
+                    webc.DownloadFileAsync(new Uri("https://raw.githubusercontent.com/pjao/MD380tools-PT/master/D013.020.bin"), "nongps_fw.bin");
                     break;
                 default:
-                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AACGA-MHWHgstYODs3muypxMa/firmware-noGPS.bin?dl=1"), "nongps_fw.bin");
+//                    webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AACGA-MHWHgstYODs3muypxMa/firmware-noGPS.bin?dl=1"), "nongps_fw.bin");
+                    webc.DownloadFileAsync(new Uri("https://raw.githubusercontent.com/pjao/MD380tools-PT/master/firmware-noGPS-Beta.bin"), "nongps_fw.bin");
                     break;
 
             }
@@ -320,7 +336,8 @@ namespace TyteraFlashTool
             bw.RunWorkerAsync();*/
             DLFileName = "userdb.bin";
             downloading = true;
-            webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AAB9TpX1gAft3_m17I3eY144a/userdb.bin?dl=1"), "userdb.bin");
+//            webc.DownloadFileAsync(new Uri("https://www.dropbox.com/sh/utb53v54wph7q8x/AAB9TpX1gAft3_m17I3eY144a/userdb.bin?dl=1"), "userdb.bin");
+            webc.DownloadFileAsync(new Uri("https://raw.githubusercontent.com/pjao/MD380tools-PT/master/userdb.bin"), "userdb.bin");
 
 
 

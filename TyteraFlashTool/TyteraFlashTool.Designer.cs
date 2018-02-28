@@ -160,9 +160,10 @@
             this.cbVersao.ForeColor = System.Drawing.Color.White;
             this.cbVersao.FormattingEnabled = true;
             this.cbVersao.Items.AddRange(new object[] {
+            "BETA - Ultima versão",
             "Ecrã Novo - Letra Preta",
             "Ecrã Novo - Letra Branca",
-            "Ecrã Antigo ",
+            "Ecrã Antigo",
             "MD380Tools Travis",
             "Firmware Original"});
             this.cbVersao.Location = new System.Drawing.Point(3, 48);
@@ -180,7 +181,7 @@
             this.nsLabel1.Size = new System.Drawing.Size(85, 23);
             this.nsLabel1.TabIndex = 13;
             this.nsLabel1.Text = "nsLabel1";
-            this.nsLabel1.Value1 = "20180225-1800";
+            this.nsLabel1.Value1 = "20180228-1800";
             this.nsLabel1.Value2 = "";
             this.nsLabel1.Click += new System.EventHandler(this.nsLabel1_Click);
             // 
